@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-item lines="none">
+			<ion-label style="font-weight: 800; font-size: 2em;" routerLink="/home">Music</ion-label>
+		</ion-item>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-list lines="full" class="ion-no-margin ion-no-padding ios list-ios list-lines-full list-ios-lines-full hydrated">
+		<h1 class="ion-text-center">{{ heading }}</h1>
+		<form [formGroup]="songForm" (ngSubmit)="submitSong()">
+			<ion-item>
+				<ion-label color="secondary" position="floating">Song Title</ion-label>
+				<ion-input type="text" required autocapitalize="on" minlength="2" formControlName="artist" placeholder="Artist..."></ion-input>
+			</ion-item>
+		
+			<ion-item>
+				<ion-label color="secondary" position="floating">Song Artist</ion-label>
+				<ion-input type="text" required autocapitalize="on" minlength="2" formControlName="title" placeholder="Title..."></ion-input>
+			</ion-item>
+		
+			<ion-row>
+				<ion-col>
+				<ion-button type="submit" color="secondary" shape="full" expand="block">Add Song</ion-button>
+				</ion-col>
+			</ion-row>
+		</form>
+	</ion-list>
+</ion-content>

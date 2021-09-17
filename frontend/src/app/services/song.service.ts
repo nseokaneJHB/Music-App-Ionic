@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
 	providedIn: 'root'
@@ -14,7 +14,7 @@ export class SongService {
 
 	constructor(private __http: HttpClient, private __router: Router) {}
 
-	url = 'http://localhost:3000/api/song';
+	url = environment.url;
 
 	// Get All Songs
 	async getAllSongs(){

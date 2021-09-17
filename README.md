@@ -1,4 +1,4 @@
-# **First Ionic Mobile App**
+# **Ionic Music Mobile App**
 
 ## Requirements:
 - NPM: v6.14.14
